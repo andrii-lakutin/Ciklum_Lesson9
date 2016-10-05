@@ -1,0 +1,18 @@
+// COLORS
+$itemBorder: black;
+$loadMoreBtn: #008CFF;
+$highlight: rgba(231,166,26,1);
+
+// FONTS
+$main-font: 'Roboto',sans-serif;
+
+//MIXINS
+@mixin types($from, $to) {
+	background: linear-gradient(to bottom, $from 0%, $to 100%);
+	border: 2px solid darken($to, 20%);
+	border-radius: 4px;
+	&:first-letter{
+		text-transform: uppercase;
+	}
+}
+

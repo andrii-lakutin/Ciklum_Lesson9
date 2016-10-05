@@ -1,0 +1,12 @@
+<div>
+	<ul class="Filters">
+		<li 
+			class={{filter.toLowerCase()}} 
+			*ngFor="let filter of filters" 
+			(click)="selectFilter($event)">
+			
+			{{filter}}
+			
+		</li>
+	</ul>
+</div>

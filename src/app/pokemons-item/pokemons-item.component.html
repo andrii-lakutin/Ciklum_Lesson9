@@ -1,0 +1,7 @@
+<div class="pokemonItem">
+  <img src={{pokemon.imgUrl}}>
+  <h1>{{pokemon.name}}</h1>
+  <ul>
+  	<li class={{type.name}} *ngFor="let type of pokemon.types">{{type.name}}</li>
+  </ul>
+</div>

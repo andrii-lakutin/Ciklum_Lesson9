@@ -1,3 +1,4 @@
-<h1>
-  {{title}}
-</h1>
+<header>POKEDEX</header>
+<app-pokemons-types [filters]="filters"></app-pokemons-types>
+<app-pokemons-list [pokemons]="filteredPokemons"></app-pokemons-list>
+<div class="loadMore" (click)="loadMore()">Load More</div>

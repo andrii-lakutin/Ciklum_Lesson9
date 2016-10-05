@@ -1,0 +1,18 @@
+.pokemonsWrap{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align: center;
+	max-width: 50%;
+	margin: 0 auto;
+	.itemWrap{
+		flex: 1 1 30%;
+		max-width: 180px;
+		height: 225px; 
+		margin: 10px;
+		@media screen and (min-width: 1300px){
+			//для того чтобы максимум 3 было в ряду на огромных экранах
+			max-width: 30%;
+		} 
+	}
+}
