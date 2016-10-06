@@ -1,11 +1,18 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import {AdditionalInfoComponent} from './additional-info/additional-info.component';
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-  providers: []
-})
-export class PokemonsRoutingModule { }
+const routes: Routes = [
+  {
+  	path: '',
+  	redirectTo : 'pokemon/unknownPokemon',
+  	pathMatch: 'full'
+  },
+  {
+    path: 'pokemon/:id',
+    component: AdditionalInfoComponent
+  }
+];
+
+export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

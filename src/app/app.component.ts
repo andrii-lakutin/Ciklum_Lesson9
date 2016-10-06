@@ -32,6 +32,7 @@ export class AppComponent {
 				name  : item.name,
 				imgUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other-sprites/official-artwork/${item.pkdx_id}.png`,
 				types : item.types,
+				route : `/pokemon/${item.pkdx_id}`
   			});
   		});
   	});
@@ -53,6 +54,7 @@ export class AppComponent {
 				name  : item.name,
 				imgUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other-sprites/official-artwork/${item.pkdx_id}.png`,
 				types : item.types,
+				route : `/pokemon/${item.pkdx_id}`
   			});
   		});
   	});
@@ -60,7 +62,6 @@ export class AppComponent {
 
   ngDoCheck(){
   	if (this.pokemons !== this.filteredPokemons) {
-  		console.log('changes');
   		this.filteredPokemons = this.apiService.pokemons.filter((item) => {
       		let check = {name: 'no value'};
     		

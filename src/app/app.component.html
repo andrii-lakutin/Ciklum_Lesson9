@@ -1,4 +1,7 @@
 <header>POKEDEX</header>
 <app-pokemons-types [filters]="filters"></app-pokemons-types>
+<!-- Additional info by routing -->
+<router-outlet></router-outlet>
+<!-- Additional info by routing end -->
 <app-pokemons-list [pokemons]="filteredPokemons"></app-pokemons-list>
 <div class="loadMore" (click)="loadMore()">Load More</div>

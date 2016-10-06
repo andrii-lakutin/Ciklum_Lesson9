@@ -17,13 +17,28 @@ export class ApiService {
   getPokemons(){
    	return this.http.get(`http://pokeapi.co/api/v1/pokemon/?limit=12`)
    		.toPromise()
-   		.then(res => res.json())
+   		.then(
+        res => res.json(),
+        error => console.log(`Rejected: ${error}`)
+      );
   }
 
   loadMore(){
   	return this.http.get(`http://pokeapi.co/api/v1/pokemon/?limit=12&offset=${this.paging += 12}`)
    		.toPromise()
-   		.then(res => res.json())
+   		.then(
+        res => res.json(),
+        error => console.log(`Rejected: ${error}`)
+      );
+  }
+
+  getExactPokemon(id){
+    return this.http.get(`http://pokeapi.co/api/v1/pokemon/${id}`)
+      .toPromise()
+      .then(
+        res   => res.json(),
+        error => console.log(`Rejected: ${error}`)
+      );
   }
 
 }

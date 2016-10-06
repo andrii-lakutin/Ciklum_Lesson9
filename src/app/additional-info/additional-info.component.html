@@ -1,0 +1,13 @@
+<div *ngIf='pokemon.isExist' ngClass={{pokemon.types[0].name}}>
+	<div class="main">
+	  <img src={{pokemon.imgUrl}}>
+	  <ul>
+	  	<li>Attack<p>{{pokemon.attack}}</p></li>
+	  	<li>Defense<p>{{pokemon.defense}}</p></li>
+	  	<li>Exp<p>{{pokemon.exp}}</p></li>
+	  	<li>Happiness <p>{{pokemon.happiness}}</p></li>
+	  	<li>Hp<p>{{pokemon.hp}}</p></li>
+	  	<li>Weight<p>{{pokemon.weight}}</p></li>
+	  </ul>
+	</div>
+</div>
